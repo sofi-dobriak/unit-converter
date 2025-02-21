@@ -25,7 +25,7 @@ export function handleInputFill(e) {
   }
 }
 
-export function hadleReplaceButtonClick(e) {
+export function hadleReplaceButtonClick() {
   const currentFahrenheit = refs.fahrenheitInput.value;
   const currentCelsius = refs.celsiusInput.value;
 

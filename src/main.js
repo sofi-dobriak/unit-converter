@@ -1,10 +1,12 @@
-// TEMP
+// =========== TEMP ===========
 
-import { refs } from './js/temp/refs';
-import { handleInputFill, hadleReplaceButtonClick } from './js/temp/handlers';
+import { refs } from './js/refs';
+import { handleInputFill, hadleReplaceButtonClick } from './js/handlers';
 
-const { fahrenheit, celsius } = refs.tempForm.elements;
+document.addEventListener('DOMContentLoaded', () => {
+  refs.fahrenheitInput.addEventListener('input', handleInputFill);
+  refs.celsiusInput.addEventListener('input', handleInputFill);
+  refs.replaceButton.addEventListener('click', hadleReplaceButtonClick);
+});
 
-fahrenheit.addEventListener('input', handleInputFill);
-celsius.addEventListener('input', handleInputFill);
-refs.replaceButton.addEventListener('click', hadleReplaceButtonClick);
+// =========== next ===========
