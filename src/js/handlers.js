@@ -29,19 +29,12 @@ export function hadleReplaceButtonClick() {
   const currentFahrenheit = refs.fahrenheitInput.value;
   const currentCelsius = refs.celsiusInput.value;
 
+  refs.celsiusInput.value = currentFahrenheit;
+  refs.fahrenheitInput.value = currentCelsius;
+
   const fahrenheitPlaceholder = refs.fahrenheitInput.placeholder;
   const celsiusPlaceholder = refs.celsiusInput.placeholder;
 
   refs.fahrenheitInput.placeholder = celsiusPlaceholder;
   refs.celsiusInput.placeholder = fahrenheitPlaceholder;
-
-  if (currentFahrenheit) {
-    refs.celsiusInput.value = currentFahrenheit;
-    const newFarenheit = celsiusInFaringate(currentFahrenheit);
-    refs.fahrenheitInput.value = +newFarenheit.toFixed(2);
-  } else if (currentCelsius) {
-    refs.fahrenheitInput.value = currentCelsius;
-    const newCelsius = faringatesInCelsius(currentCelsius);
-    refs.celsiusInput.value = +newCelsius.toFixed(2);
-  }
 }
