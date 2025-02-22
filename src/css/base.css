@@ -55,11 +55,10 @@ body {
     width: 100%;
     max-width: 520px;
     padding: 8px 12px;
-
     position: relative;
     margin: 0 auto;
-
     border-radius: 6px;
+    margin-bottom: 20px;
 }
 
 .converter-trigger-button {
@@ -177,24 +176,15 @@ input[type="number"]::-webkit-inner-spin-button {
     box-shadow: 0 8px 16px 0 rgba(50, 50, 71, 0.06), 0 8px 8px 0 rgba(50, 50, 71, 0.08);
 }
 
-
-.replace-button {
-    background-color: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.replace-button:hover .replace-icon,
-.replace-button:focus .replace-icon {
-    color: var(--main-accent-color)
-}
-
 .replace-icon {
     font-size: 20px;
     color: var(--main-icon-color);
     transition: color .3s ease;
+}
+
+.replace-icon:hover,
+.replace-icon:focus {
+    color: var(--main-accent-color)
 }
 
 @media screen and (max-width: 340px) {

@@ -2,7 +2,7 @@ import { refs } from './refs';
 
 const triggerButton = document.querySelector('.js-converter-trigger-button');
 
-export function showForms() {
+export function showForm() {
   const isOpen = refs.tempForm.classList.contains('active');
 
   if (isOpen) {
