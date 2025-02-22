@@ -91,7 +91,7 @@ export function handleLengthInput(e) {
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value = convertedValue !== '' ? +convertedValue.toFixed(2) : '';
+        target.value = convertedValue !== '' ? +convertedValue.toFixed(3) : '';
       }
     }
   });
