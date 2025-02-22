@@ -1,7 +1,17 @@
 export const refs = {
-  fahrenheitInput: document.querySelector('.js-fahrenheit-input'),
-  celsiusInput: document.querySelector('.js-celsius-input'),
-  replaceButton: document.querySelector('.js-replace-button'),
-  triggerButton: document.querySelector('.js-converter-trigger-button'),
-  form: document.querySelector('.js-temp-form'),
+  tempForm: document.querySelector('.js-temp-form'),
+  fahrenheitToCelsiusInput: document.querySelector(
+    '[data-convert-type="F-to-C"]'
+  ),
+  celsiusToFarenheitInput: document.querySelector(
+    '[data-convert-type="C-to-F"]'
+  ),
+  fahrenheitToKelvinInput: document.querySelector(
+    '[data-convert-type="F-to-K"]'
+  ),
+  kelvinToFarenheitInput: document.querySelector(
+    '[data-convert-type="K-to-F"]'
+  ),
+  celsiusToKelvinInput: document.querySelector('[data-convert-type="C-to-K"]'),
+  kelvinToCelsiusInput: document.querySelector('[data-convert-type="K-to-C"]'),
 };

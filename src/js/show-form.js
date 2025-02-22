@@ -1,11 +1,15 @@
 import { refs } from './refs';
 
+const triggerButton = document.querySelector('.js-converter-trigger-button');
+
 export function showForms() {
-  const isOpen = refs.form.classList.contains('active');
+  const isOpen = refs.tempForm.classList.contains('active');
 
   if (isOpen) {
-    refs.form.classList.remove('active');
+    refs.tempForm.classList.remove('active');
+    triggerButton.classList.remove('active');
   } else {
-    refs.form.classList.add('active');
+    refs.tempForm.classList.add('active');
+    triggerButton.classList.add('active');
   }
 }

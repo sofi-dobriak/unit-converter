@@ -1,14 +1,25 @@
 // =========== TEMP ===========
 
 import { refs } from './js/refs';
-import { handleInputFill, hadleReplaceButtonClick } from './js/handlers';
+import './js/show-form';
 import { showForms } from './js/show-form';
+import { handleReplaceButtonClick } from './js/replace-button';
+import { handleTemperatureInput } from './js/handlers';
+
+// ===== TEMPERATURE =====
 
 document.addEventListener('DOMContentLoaded', () => {
-  // refs.fahrenheitInput.addEventListener('input', handleInputFill);
-  // refs.celsiusInput.addEventListener('input', handleInputFill);
-  // refs.replaceButton.addEventListener('click', hadleReplaceButtonClick);
-  refs.triggerButton.addEventListener('click', showForms);
+  Object.values(refs).forEach(ref => {
+    if (ref instanceof HTMLInputElement) {
+      ref.addEventListener('input', handleTemperatureInput);
+    }
+  });
 });
 
-// =========== next ===========
+// ===== GENERAL =====
+
+const triggerButton = document.querySelector('.js-converter-trigger-button');
+triggerButton.addEventListener('click', showForms);
+
+const replaceButton = document.querySelector('.js-replace-button');
+replaceButton.addEventListener('click', handleReplaceButtonClick);

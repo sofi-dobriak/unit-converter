@@ -92,7 +92,11 @@ body {
 }
 
 .converter-icon {
-    transition: color .3s ease;
+    transition: color .3s ease, transform .3s ease;
+}
+
+.converter-trigger-button.active .converter-icon {
+    transform: rotate(180deg);
 }
 
 /* ======== FORMS ======== */

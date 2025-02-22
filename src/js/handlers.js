@@ -1,40 +1,53 @@
 import { refs } from './refs';
-import { celsiusInFaringate, faringatesInCelsius } from './temp-covert';
+import { convertTemp } from './temp-covert';
 
-export function handleInputFill(e) {
-  const isFromFahrenheit = e.target === refs.fahrenheitInput;
+const conversionMap = {
+  'F-to-C': {
+    target: refs.celsiusToFarenheitInput,
+    type: 'F-to-C',
+  },
+  'C-to-F': {
+    target: refs.fahrenheitToCelsiusInput,
+    type: 'C-to-F',
+  },
+  'F-to-K': {
+    target: refs.kelvinToFarenheitInput,
+    type: 'F-to-K',
+  },
+  'K-to-F': {
+    target: refs.fahrenheitToKelvinInput,
+    type: 'K-to-F',
+  },
+  'C-to-K': {
+    target: refs.kelvinToCelsiusInput,
+    type: 'C-to-K',
+  },
+  'K-to-C': {
+    target: refs.celsiusToKelvinInput,
+    type: 'K-to-C',
+  },
+};
 
-  if (isFromFahrenheit) {
-    const fahrenheitValue = refs.fahrenheitInput.value;
+export function handleTemperatureInput(e) {
+  const input = e.target;
+  const value = parseFloat(input.value);
 
-    if (fahrenheitValue === '') {
-      refs.celsiusInput.value = '';
-    } else {
-      const convertedCelsius = faringatesInCelsius(fahrenheitValue);
-      refs.celsiusInput.value = +convertedCelsius.toFixed(2);
-    }
-  } else {
-    const celsiusValue = refs.celsiusInput.value;
-
-    if (celsiusValue === '') {
-      refs.fahrenheitInput.value === '';
-    } else {
-      const convertedFahrenheit = celsiusInFaringate(celsiusValue);
-      refs.fahrenheitInput.value = +convertedFahrenheit.toFixed(2);
-    }
+  if (isNaN(value) || input.value === '') {
+    Object.values(conversionMap).forEach(({ target }) => (target.value = ''));
+    return;
   }
-}
 
-export function hadleReplaceButtonClick() {
-  const currentFahrenheit = refs.fahrenheitInput.value;
-  const currentCelsius = refs.celsiusInput.value;
+  Object.keys(conversionMap).forEach(key => {
+    if (input.dataset.convertType === key) {
+      const { target, type } = conversionMap[key];
 
-  refs.celsiusInput.value = currentFahrenheit;
-  refs.fahrenheitInput.value = currentCelsius;
+      const convertedValue = convertTemp(type, value);
 
-  const fahrenheitPlaceholder = refs.fahrenheitInput.placeholder;
-  const celsiusPlaceholder = refs.celsiusInput.placeholder;
-
-  refs.fahrenheitInput.placeholder = celsiusPlaceholder;
-  refs.celsiusInput.placeholder = fahrenheitPlaceholder;
+      if (isNaN(convertedValue)) {
+        target.value = '';
+      } else {
+        target.value = convertedValue !== '' ? +convertedValue.toFixed(1) : '';
+      }
+    }
+  });
 }
