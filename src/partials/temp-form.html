@@ -1,11 +1,58 @@
-<form class="form temp-form js-temp-form">
-    <input class="input fahrenheit-input js-fahrenheit-input" type="number" name="fahrenheit" id="fahrenheit"
-        placeholder="Enter degrees in Fahrenheit">
+<div class="container">
+    <div class="converter-wrapper">
+        <button class="converter-trigger-button js-converter-trigger-button">
+            <span class="converter-title">Temperature</span>
+            <i class="converter-icon fa-solid fa-chevron-down"></i>
+        </button>
 
-    <button class="replace-button js-replace-button" type="button">
-        <i class="fa-solid fa-arrow-right-arrow-left replace-icon"></i>
-    </button>
+        <form class="form temp-form js-temp-form">
+            <div class="converter-group">
+                <div class="input-container">
+                    <span class="unit-label">°F</span>
+                    <input class="input temp-input" type="number" placeholder="°F">
+                </div>
 
-    <input class="input celsius-input js-celsius-input" type="number" name="celsius" id="celsius"
-        placeholder="Enter degrees in Celsius">
-</form>
+                <button class="replace-button js-replace-button" type="button">
+                    <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <div class="input-container">
+                    <span class="unit-label">°C</span>
+                    <input class="input temp-input" type="number" placeholder="°C">
+                </div>
+            </div>
+
+            <div class="converter-group">
+                <div class="input-container">
+                    <span class="unit-label">°F</span>
+                    <input class="input temp-input" type="number" placeholder="°F">
+                </div>
+
+                <button class="replace-button js-replace-button" type="button">
+                    <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <div class="input-container">
+                    <span class="unit-label">°K</span>
+                    <input class="input temp-input" type="number" placeholder="°K">
+                </div>
+            </div>
+
+            <div class="converter-group">
+                <div class="input-container">
+                    <span class="unit-label">°C</span>
+                    <input class="input temp-input" type="number" placeholder="°C">
+                </div>
+
+                <button class="replace-button js-replace-button" type="button">
+                    <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <div class="input-container">
+                    <span class="unit-label">°K</span>
+                    <input class="input temp-input" type="number" placeholder="°K">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
