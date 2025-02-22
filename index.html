@@ -10,121 +10,178 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script type="module" crossorigin src="/unit-converter/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/unit-converter/assets/index-BM-UurG2.css">
+  <link rel="stylesheet" crossorigin href="/unit-converter/assets/index-CTrbohmE.css">
 </head>
 
 <body>
 
   <main>
     <div class="container">
-    <h1 class="add-title">Unit coverter</h1>
+      <h1 class="add-title">Unit coverter</h1>
+      <div class="converter-wrapper">
+    <button class="converter-trigger-button js-temp-trigger-button">
+        <span class="converter-title">Temperature</span>
+        <i class="converter-icon fa-solid fa-chevron-down"></i>
+    </button>
+
+    <form class="form temp-form js-temp-form">
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">°F</span>
+                <input class="input temp-input" type="number" data-convert-type="F-to-C" placeholder="°F">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">°C</span>
+                <input class="input temp-input" type="number" data-convert-type="C-to-F" placeholder="°C">
+            </div>
+        </div>
+
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">°F</span>
+                <input class="input temp-input" type="number" data-convert-type="F-to-K" placeholder="°F">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">°K</span>
+                <input class="input temp-input" type="number" data-convert-type="K-to-F" placeholder="°K">
+            </div>
+        </div>
+
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">°C</span>
+                <input class="input temp-input celsius-label" type="number" data-convert-type="C-to-K" placeholder="°C">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">°K</span>
+                <input class="input temp-input" type="number" data-convert-type="K-to-C" placeholder="°K">
+            </div>
+        </div>
+    </form>
 </div>
-    <div class="container">
-    <div class="converter-wrapper">
-        <button class="converter-trigger-button js-converter-trigger-button">
-            <span class="converter-title">Temperature</span>
-            <i class="converter-icon fa-solid fa-chevron-down"></i>
-        </button>
+      <div class="converter-wrapper">
+    <button class="converter-trigger-button js-len-trigger-button">
+        <span class="converter-title">Lengths</span>
+        <i class="converter-icon fa-solid fa-chevron-down"></i>
+    </button>
 
-        <form class="form temp-form js-temp-form">
-            <div class="converter-group">
-                <div class="input-container">
-                    <span class="unit-label">°F</span>
-                    <input class="input temp-input" type="number" data-convert-type="F-to-C" placeholder="°F">
-                </div>
-
-                <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
-
-                <div class="input-container">
-                    <span class="unit-label">°C</span>
-                    <input class="input temp-input" type="number" data-convert-type="C-to-F" placeholder="°C">
-                </div>
+    <form class="form len-form js-len-form active">
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">mm</span>
+                <input class="input len-input" type="number" data-convert-type="mm-to-cm" placeholder="0">
             </div>
 
-            <div class="converter-group">
-                <div class="input-container">
-                    <span class="unit-label">°F</span>
-                    <input class="input temp-input" type="number" data-convert-type="F-to-K" placeholder="°F">
-                </div>
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
 
-                <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+            <div class="input-container">
+                <span class="unit-label">cm</span>
+                <input class="input len-input" type="number" data-convert-type="cm-to-mm" placeholder="0">
+            </div>
+        </div>
 
-                <div class="input-container">
-                    <span class="unit-label">°K</span>
-                    <input class="input temp-input" type="number" data-convert-type="K-to-F" placeholder="°K">
-                </div>
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">cm</span>
+                <input class="input len-input" type="number" data-convert-type="cm-to-m" placeholder="0">
             </div>
 
-            <div class="converter-group">
-                <div class="input-container">
-                    <span class="unit-label">°C</span>
-                    <input class="input temp-input celsius-label" type="number" data-convert-type="C-to-K"
-                        placeholder="°C">
-                </div>
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
 
-                <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
-
-                <div class="input-container">
-                    <span class="unit-label">°K</span>
-                    <input class="input temp-input" type="number" data-convert-type="K-to-C" placeholder="°K">
-                </div>
+            <div class="input-container">
+                <span class="unit-label">m</span>
+                <input class="input len-input" type="number" data-convert-type="m-to-cm" placeholder="0">
             </div>
-        </form>
+        </div>
+
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">m</span>
+                <input class="input len-input celsius-label" type="number" data-convert-type="m-to-km" placeholder="0">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">km</span>
+                <input class="input len-input" type="number" data-convert-type="km-to-m" placeholder="0">
+            </div>
+        </div>
+
+        <!-- --------------------------------------------------------- -->
+
+        <!-- inch -->
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">cm</span>
+                <input class="input len-input celsius-label" type="number" data-convert-type="cm-to-inch"
+                    placeholder="0">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">in</span>
+                <input class="input len-input" type="number" data-convert-type="inch-to-cm" placeholder="0">
+            </div>
+        </div>
+
+        <!-- foot -->
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">m</span>
+                <input class="input len-input celsius-label" type="number" data-convert-type="m-to-ft" placeholder="0">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">ft</span>
+                <input class="input len-input" type="number" data-convert-type="ft-to-m" placeholder="0">
+            </div>
+        </div>
+
+        <!-- yard -->
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">m</span>
+                <input class="input len-input celsius-label" type="number" data-convert-type="m-to-yd" placeholder="0">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">yd</span>
+                <input class="input len-input" type="number" data-convert-type="yd-to-m" placeholder="0">
+            </div>
+        </div>
+
+        <!-- mile -->
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">km</span>
+                <input class="input len-input celsius-label" type="number" data-convert-type="km-to-mi" placeholder="0">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">mi</span>
+                <input class="input len-input" type="number" data-convert-type="mi-to-km" placeholder="0">
+            </div>
+        </div>
+    </form>
+</div>
     </div>
-</div>
-    <div class="container">
-    <div class="converter-wrapper">
-        <button class="converter-trigger-button js-len-trigger-button">
-            <span class="converter-title">Lengths</span>
-            <i class="converter-icon fa-solid fa-chevron-down"></i>
-        </button>
-
-        <form class="form len-form js-len-form">
-            <div class="converter-group">
-                <div class="input-container">
-                    <span class="unit-label">°F</span>
-                    <input class="input len-input" type="number" data-convert-type="F-to-C" placeholder="°F">
-                </div>
-
-                <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
-
-                <div class="input-container">
-                    <span class="unit-label">°C</span>
-                    <input class="input len-input" type="number" data-convert-type="C-to-F" placeholder="°C">
-                </div>
-            </div>
-
-            <div class="converter-group">
-                <div class="input-container">
-                    <span class="unit-label">°F</span>
-                    <input class="input len-input" type="number" data-convert-type="F-to-K" placeholder="°F">
-                </div>
-
-                <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
-
-                <div class="input-container">
-                    <span class="unit-label">°K</span>
-                    <input class="input len-input" type="number" data-convert-type="K-to-F" placeholder="°K">
-                </div>
-            </div>
-
-            <div class="converter-group">
-                <div class="input-container">
-                    <span class="unit-label">°C</span>
-                    <input class="input len-input celsius-label" type="number" data-convert-type="C-to-K"
-                        placeholder="°C">
-                </div>
-
-                <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
-
-                <div class="input-container">
-                    <span class="unit-label">°K</span>
-                    <input class="input len-input" type="number" data-convert-type="K-to-C" placeholder="°K">
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
   </main>
 
 
