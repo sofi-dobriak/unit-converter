@@ -1,8 +1,8 @@
 import { refs } from './refs';
 
-const triggerButton = document.querySelector('.js-converter-trigger-button');
+const triggerButton = document.querySelector('.js-temp-trigger-button');
 
-export function showForm() {
+export function showTempForm() {
   const isOpen = refs.tempForm.classList.contains('active');
 
   if (isOpen) {

@@ -1,11 +1,15 @@
 import { handleTemperatureInput } from './handlers';
-import { showForm } from './show-form';
+import { showTempForm } from './show-form';
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.temp-input').forEach(input => {
-    input.addEventListener('input', handleTemperatureInput);
+  const tempForm = document.querySelector('.temp-form');
+
+  tempForm.addEventListener('input', e => {
+    if (e.target.classList.contains('temp-input')) {
+      handleTemperatureInput(e);
+    }
   });
 });
 
-const triggerButton = document.querySelector('.js-converter-trigger-button');
-triggerButton.addEventListener('click', showForm);
+const triggerButton = document.querySelector('.js-temp-trigger-button');
+triggerButton.addEventListener('click', showTempForm);

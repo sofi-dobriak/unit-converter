@@ -26,7 +26,7 @@
     --main-accent-color: #6979f8;
     --main-text-color: #fff;
     --main-icon-color: #fff;
-    --placeholder-color: #e4e4e4;
+    --placeholder-color: #e4e4e484;
     --success-color: #00c48c;
     --error-color: #ff647c;
 
@@ -109,11 +109,11 @@ body {
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.2s ease, opacity 0.3s ease, padding 0.3s ease;
 }
 
 .form.active {
-    max-height: 500px;
+    max-height: 800px;
     opacity: 1;
     visibility: visible;
     padding: 40px 20px;
@@ -145,7 +145,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .unit-label {
     position: absolute;
     top: -25px;
-    left: 0;
+    left: 4px;
     color: white;
 }
 
@@ -165,7 +165,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .input::placeholder {
     font-family: inherit;
     font-style: inherit;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--placeholder-color);
 }
 
