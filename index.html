@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script type="module" crossorigin src="/unit-converter/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/unit-converter/assets/index-C4xnOYbm.css">
+  <link rel="stylesheet" crossorigin href="/unit-converter/assets/index-B4y26Kwp.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
             <div class="converter-group">
                 <div class="input-container">
                     <span class="unit-label">°F</span>
-                    <input class="input temp-input" type="number" placeholder="°F">
+                    <input class="input temp-input" type="number" data-convert-type="F-to-C" placeholder="°F">
                 </div>
 
                 <button class="replace-button js-replace-button" type="button">
@@ -39,14 +39,14 @@
 
                 <div class="input-container">
                     <span class="unit-label">°C</span>
-                    <input class="input temp-input" type="number" placeholder="°C">
+                    <input class="input temp-input" type="number" data-convert-type="C-to-F" placeholder="°C">
                 </div>
             </div>
 
             <div class="converter-group">
                 <div class="input-container">
                     <span class="unit-label">°F</span>
-                    <input class="input temp-input" type="number" placeholder="°F">
+                    <input class="input temp-input" type="number" data-convert-type="F-to-K" placeholder="°F">
                 </div>
 
                 <button class="replace-button js-replace-button" type="button">
@@ -55,14 +55,15 @@
 
                 <div class="input-container">
                     <span class="unit-label">°K</span>
-                    <input class="input temp-input" type="number" placeholder="°K">
+                    <input class="input temp-input" type="number" data-convert-type="K-to-F" placeholder="°K">
                 </div>
             </div>
 
             <div class="converter-group">
                 <div class="input-container">
                     <span class="unit-label">°C</span>
-                    <input class="input temp-input" type="number" placeholder="°C">
+                    <input class="input temp-input celsius-label" type="number" data-convert-type="C-to-K"
+                        placeholder="°C">
                 </div>
 
                 <button class="replace-button js-replace-button" type="button">
@@ -71,7 +72,7 @@
 
                 <div class="input-container">
                     <span class="unit-label">°K</span>
-                    <input class="input temp-input" type="number" placeholder="°K">
+                    <input class="input temp-input" type="number" data-convert-type="K-to-C" placeholder="°K">
                 </div>
             </div>
         </form>
