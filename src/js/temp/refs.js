@@ -14,4 +14,6 @@ export const refs = {
   ),
   celsiusToKelvinInput: document.querySelector('[data-convert-type="C-to-K"]'),
   kelvinToCelsiusInput: document.querySelector('[data-convert-type="K-to-C"]'),
+
+  triggerButton: document.querySelector('.js-temp-trigger-button'),
 };

@@ -1,5 +1,6 @@
 import { showForms } from './show-len-form';
 import { handleLengthInput } from './handlers';
+import { refs } from './refs';
 
 document.addEventListener('DOMContentLoaded', () => {
   const lengthForm = document.querySelector('.len-form');
@@ -11,5 +12,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const lenTriggerButton = document.querySelector('.js-len-trigger-button');
-lenTriggerButton.addEventListener('click', showForms);
+refs.lenTriggerButton.addEventListener('click', showForms);

@@ -1,5 +1,6 @@
 import { handleTemperatureInput } from './handlers';
 import { showTempForm } from './show-form';
+import { refs } from './refs';
 
 document.addEventListener('DOMContentLoaded', () => {
   const tempForm = document.querySelector('.temp-form');
@@ -11,5 +12,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const triggerButton = document.querySelector('.js-temp-trigger-button');
-triggerButton.addEventListener('click', showTempForm);
+refs.triggerButton.addEventListener('click', showTempForm);
