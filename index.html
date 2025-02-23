@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" /> -->
+  <link rel="icon" type="image/svg+xml" href="/unit-converter/assets/favicon-udbr5qQU.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Unit converter</title>
@@ -17,7 +17,7 @@
 
   <main>
     <div class="container">
-      <h1 class="add-title">Unit coverter</h1>
+      <h1 class="add-title">Unit converter</h1>
       <div class="converter-wrapper">
     <button class="converter-trigger-button js-temp-trigger-button">
         <span class="converter-title">Temperature</span>
@@ -315,7 +315,7 @@
         <i class="converter-icon fa-solid fa-chevron-down"></i>
     </button>
 
-    <form class="form time-form js-time-form active">
+    <form class="form time-form js-time-form">
         <div class="converter-group">
             <div class="input-container">
                 <span class="unit-label">ms</span>
@@ -369,6 +369,84 @@
             <div class="input-container">
                 <span class="unit-label">days</span>
                 <input class="input time-input" type="number" data-convert-type="days-to-h" placeholder="1">
+            </div>
+        </div>
+    </form>
+</div>
+      <div class="converter-wrapper">
+    <button class="converter-trigger-button js-date-trigger-button">
+        <span class="converter-title">Date (average values)</span>
+        <i class="converter-icon fa-solid fa-chevron-down"></i>
+    </button>
+
+    <form class="form date-form js-date-form">
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">days</span>
+                <input class="input date-input" type="number" data-convert-type="day-to-week" placeholder="1">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">weeks</span>
+                <input class="input date-input" type="number" data-convert-type="week-to-day" placeholder="1">
+            </div>
+        </div>
+
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">weeks</span>
+                <input class="input date-input" type="number" data-convert-type="week-to-month" placeholder="1">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">months</span>
+                <input class="input date-input" type="number" data-convert-type="month-to-week" placeholder="1">
+            </div>
+        </div>
+
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">months</span>
+                <input class="input date-input" type="number" data-convert-type="month-to-year" placeholder="1">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">years</span>
+                <input class="input date-input" type="number" data-convert-type="year-to-month" placeholder="1">
+            </div>
+        </div>
+
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">years</span>
+                <input class="input date-input" type="number" data-convert-type="year-to-decade" placeholder="1">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">decades</span>
+                <input class="input date-input" type="number" data-convert-type="decade-to-year" placeholder="1">
+            </div>
+        </div>
+
+        <div class="converter-group">
+            <div class="input-container">
+                <span class="unit-label">decades</span>
+                <input class="input date-input" type="number" data-convert-type="decade-to-century" placeholder="1">
+            </div>
+
+            <i class="replace-icon fa-solid fa-arrow-right-arrow-left"></i>
+
+            <div class="input-container">
+                <span class="unit-label">centuries</span>
+                <input class="input date-input" type="number" data-convert-type="century-to-decade" placeholder="1">
             </div>
         </div>
     </form>
