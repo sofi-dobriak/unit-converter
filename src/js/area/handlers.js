@@ -64,7 +64,7 @@ export function handleAreaInput(e) {
         target.value = '';
       } else {
         target.value =
-          convertedValue !== '' ? `${convertedValue.toFixed(3)}²` : ''; // Додаємо '²' після значення
+          convertedValue !== '' ? `${convertedValue.toFixed(3)}²` : '';
       }
     }
   });
