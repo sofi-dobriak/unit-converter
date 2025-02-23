@@ -63,8 +63,7 @@ export function handleAreaInput(e) {
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value =
-          convertedValue !== '' ? `${convertedValue.toFixed(3)}²` : '';
+        target.value = convertedValue !== '' ? +convertedValue.toFixed(4) : '';
       }
     }
   });

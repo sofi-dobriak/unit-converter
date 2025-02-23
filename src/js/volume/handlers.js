@@ -62,8 +62,7 @@ export function handleVolumeInput(e) {
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value =
-          convertedValue !== '' ? `${convertedValue.toFixed(3)}³` : '';
+        target.value = convertedValue !== '' ? +convertedValue.toFixed(3) : '';
       }
     }
   });
