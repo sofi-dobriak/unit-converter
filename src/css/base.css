@@ -35,6 +35,11 @@
 
 /* ======== STYLES ======== */
 
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #000 #5d5d5d;
+}
+
 * {
     box-sizing: border-box;
 }
