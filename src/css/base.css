@@ -36,6 +36,7 @@
 /* ======== STYLES ======== */
 
 html {
+    overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #000 #5d5d5d;
 }
