@@ -1,6 +1,6 @@
 import { refs } from './refs';
 
-const landTriggerButton = document.querySelector('.js-land-trigger-button');
+const landTriggerButton = document.querySelector('.js-land-trigger-button'); //for arrow
 
 export function showForms() {
   const isOpen = refs.landForm.classList.contains('active');

@@ -1,6 +1,6 @@
 import { refs } from './refs';
 
-const timeTriggerButton = document.querySelector('.js-time-trigger-button');
+const timeTriggerButton = document.querySelector('.js-time-trigger-button'); //for arrow
 
 export function showForms() {
   const isOpen = refs.timeForm.classList.contains('active');
