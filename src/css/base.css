@@ -46,6 +46,11 @@ html {
 }
 
 body {
+    background-image: linear-gradient(#00000096, #00000096), url(../images/bg-decor.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
     font-family: var(--main-font-family);
@@ -57,6 +62,7 @@ body {
 /* ======== FORMS BOXES======== */
 
 .converter-wrapper {
+    background-color: var(--main-bg-color);
     border: 1px solid var(--box-border);
     width: 100%;
     max-width: 520px;
@@ -157,7 +163,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .input {
     border: 1px solid rgb(237, 237, 237);
-    background-color: transparent;
+    background-color: var(--main-bg-color);
     border-radius: 6px;
     width: 100%;
     padding: 8px 12px;
@@ -193,7 +199,19 @@ input[type="number"]::-webkit-inner-spin-button {
     color: var(--main-accent-color)
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 400px) {
+    .converter-title {
+        font-size: 14px;
+    }
+
+    .input {
+        font-size: 14px;
+    }
+
+    .input::placeholder {
+        font-size: 14px;
+    }
+
     .converter-group {
         gap: 14px;
     }
