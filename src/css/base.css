@@ -46,7 +46,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(#00000096, #00000096), url(../images/bg-decor.png);
+    background-image: linear-gradient(#00000085, #00000085), url(../images/bg-decor.png);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
