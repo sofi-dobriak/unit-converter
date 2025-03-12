@@ -1,6 +1,6 @@
 import { refs } from './refs';
 
-const lenTriggerButton = document.querySelector('.js-len-trigger-button'); //for arrow
+const lenTriggerButton = document.querySelector('.js-len-trigger-button');
 
 export function showForms() {
   const isOpen = refs.lenForm.classList.contains('active');

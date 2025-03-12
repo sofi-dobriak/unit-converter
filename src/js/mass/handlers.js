@@ -27,23 +27,23 @@ export function handleMassFormInput(e) {
   const input = e.target;
   const value = input.value;
 
-  if (isNaN(value) || input.value === '') {
+  if (isNaN(+value) || input.value === '') {
     Object.values(conversionMap).forEach(({ target }) => {
       target.value = '';
-      return;
     });
+    return;
   }
 
   Object.keys(conversionMap).forEach(key => {
     if (input.dataset.convertType === key) {
       const { target, type } = conversionMap[key];
 
-      const convertedValue = massConvert(value, type);
+      const convertedValue = massConvert(+value, type);
 
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value = convertedValue !== '' ? +convertedValue.toFixed(4) : '';
+        target.value = +convertedValue.toFixed(4);
       }
     }
   });

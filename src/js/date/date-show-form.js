@@ -1,6 +1,6 @@
 import { refs } from './refs';
 
-const dateTriggerButton = document.querySelector('.js-date-trigger-button'); //for arrow
+const dateTriggerButton = document.querySelector('.js-date-trigger-button');
 
 export function showForms() {
   const isOpen = refs.dateForm.classList.contains('active');

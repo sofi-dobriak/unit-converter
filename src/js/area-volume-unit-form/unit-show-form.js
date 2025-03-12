@@ -2,7 +2,7 @@ import { refs } from './refs';
 
 const unitTriggerButton = document.querySelector(
   '.js-area-volume-trigger-button'
-); //for arrow
+);
 
 export function showForms() {
   const isOpen = refs.unitForm.classList.contains('active');

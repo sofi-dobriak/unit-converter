@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import { dateConvert } from './date-convert';
+import { dateConverter } from './date-convert';
 
 const conversionMap = {
   'day-to-week': {
@@ -57,7 +57,7 @@ export function handleDateFormInput(e) {
   const input = e.target;
   const value = input.value;
 
-  if (isNaN(value) || value === '') {
+  if (isNaN(+value) || value === '') {
     Object.values(conversionMap).forEach(({ target }) => (target.value = ''));
     return;
   }
@@ -66,12 +66,12 @@ export function handleDateFormInput(e) {
     if (input.dataset.convertType === key) {
       const { target, type } = conversionMap[key];
 
-      const convertedValue = dateConvert(value, type);
+      const convertedValue = dateConverter(+value, type);
 
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value = convertedValue !== '' ? +convertedValue.toFixed(3) : '';
+        target.value = +convertedValue.toFixed(3);
       }
     }
   });

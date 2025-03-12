@@ -1,6 +1,6 @@
 import { refs } from './refs';
 
-const volumeTriggerButton = document.querySelector('.js-volume-trigger-button'); //for arrow
+const volumeTriggerButton = document.querySelector('.js-volume-trigger-button');
 
 export function showForms() {
   const isOpen = refs.volumeForm.classList.contains('active');

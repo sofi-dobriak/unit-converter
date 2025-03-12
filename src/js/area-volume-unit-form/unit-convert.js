@@ -1,33 +1,11 @@
-export function unitConvert(value, type) {
-  if (isNaN(value) || value === '') return;
+const unitsConvrter = {
+  'unit-to-square': v => v ** 2,
+  'square-to-unit': v => Math.sqrt(v),
+  'unit-to-cubic': v => v ** 3,
+  'cubic-to-unit': v => Math.cbrt(v),
+};
 
-  switch (type) {
-    case 'unit-to-square':
-      return unitToSquare(value);
-
-    case 'square-to-unit':
-      return squareToUnit(value);
-
-    case 'unit-to-cubic':
-      return unitToCubic(value);
-
-    case 'cubic-to-unit':
-      return cubicToUnit(value);
-  }
-}
-
-function unitToSquare(unit) {
-  return unit ** 2;
-}
-
-function squareToUnit(squareUnit) {
-  return Math.sqrt(squareUnit);
-}
-
-function unitToCubic(unit) {
-  return unit ** 3;
-}
-
-function cubicToUnit(cubicUnit) {
-  return Math.cbrt(cubicUnit);
+export function unitConverter(value, type) {
+  if (!Number.isFinite(value)) return null;
+  return unitsConvrter[type](value);
 }

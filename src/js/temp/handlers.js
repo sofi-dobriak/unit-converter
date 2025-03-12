@@ -32,7 +32,7 @@ export function handleTemperatureInput(e) {
   const input = e.target;
   const value = parseFloat(input.value);
 
-  if (isNaN(value) || input.value === '') {
+  if (isNaN(+value) || input.value === '') {
     Object.values(conversionMap).forEach(({ target }) => (target.value = ''));
     return;
   }
@@ -41,12 +41,12 @@ export function handleTemperatureInput(e) {
     if (input.dataset.convertType === key) {
       const { target, type } = conversionMap[key];
 
-      const convertedValue = convertTemp(type, value);
+      const convertedValue = convertTemp(+value, type);
 
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value = convertedValue !== '' ? +convertedValue.toFixed(1) : '';
+        target.value = +convertedValue.toFixed(1);
       }
     }
   });

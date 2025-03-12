@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import { unitConvert } from './unit-convert';
+import { unitConverter } from './unit-convert';
 
 const conversionMap = {
   'unit-to-square': {
@@ -36,12 +36,12 @@ export function handleUnitFormInput(e) {
     if (input.dataset.convertType === key) {
       const { target, type } = conversionMap[key];
 
-      const convertedValue = unitConvert(value, type);
+      const convertedValue = unitConverter(+value, type);
 
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value = convertedValue !== '' ? +convertedValue.toFixed(2) : '';
+        target.value = +convertedValue.toFixed(2);
       }
     }
   });

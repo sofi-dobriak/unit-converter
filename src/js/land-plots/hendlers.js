@@ -47,7 +47,7 @@ export function handleLandFormInput(e) {
   const input = e.target;
   const value = input.value;
 
-  if (isNaN(value) || value === '') {
+  if (isNaN(+value) || value === '') {
     Object.values(conversionMap).forEach(({ target }) => {
       target.value = '';
     });
@@ -58,12 +58,12 @@ export function handleLandFormInput(e) {
     if (input.dataset.convertType === key) {
       const { target, type } = conversionMap[key];
 
-      const convertedValue = landConvert(value, type);
+      const convertedValue = landConvert(+value, type);
 
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value = convertedValue !== '' ? +convertedValue.toFixed(4) : '';
+        target.value = +convertedValue.toFixed(4);
       }
     }
   });

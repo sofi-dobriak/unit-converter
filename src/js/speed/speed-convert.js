@@ -1,36 +1,11 @@
+const speedConverts = {
+  'm/sec-to-km/h': v => v * 3.6,
+  'km/h-to-m/sec': v => v / 3.6,
+  'km/h-to-mi/h': v => v * 0.621371,
+  'mi/h-to-km/h': v => v * 1.60934,
+};
+
 export function speedConvert(value, type) {
-  if (isNaN(value) || value === '') return;
-
-  switch (type) {
-    case 'm/sec-to-km/h':
-      return meterPerSecToKilometerPerHour(value);
-    case 'km/h-to-m/sec':
-      return kilometerPerHourToMeterPerSec(value);
-    case 'km/h-to-mi/h':
-      return kilometerPerHourToMilePerHour(value);
-    case 'mi/h-to-km/h':
-      return milePerHourToKilometerPerHour(value);
-    default:
-      return;
-  }
-}
-
-function meterPerSecToKilometerPerHour(meterPerSec) {
-  const kilometerPerHour = meterPerSec * 3.6;
-  return kilometerPerHour;
-}
-
-function kilometerPerHourToMeterPerSec(kilometerPerHour) {
-  const meterPerSec = kilometerPerHour / 3.6;
-  return meterPerSec;
-}
-
-function kilometerPerHourToMilePerHour(kilometerPerHour) {
-  const milePerHour = kilometerPerHour * 0.621371;
-  return milePerHour;
-}
-
-function milePerHourToKilometerPerHour(milePerHour) {
-  const kilometerPerHour = milePerHour / 0.621371;
-  return kilometerPerHour;
+  if (!Number.isFinite(value)) return null;
+  return speedConverts[type](value);
 }
