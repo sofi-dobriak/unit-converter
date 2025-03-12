@@ -1,6 +1,6 @@
 import { refs } from './refs';
 
-const areaTriggerButton = document.querySelector('.js-area-trigger-button'); //for arrow
+const areaTriggerButton = document.querySelector('.js-area-trigger-button');
 
 export function showForms() {
   const isOpen = refs.areaForm.classList.contains('active');

@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import { areaConvert } from './area-convert';
+import { areaConverter } from './area-convert';
 
 const conversionMap = {
   'mm2-to-cm2': {
@@ -47,23 +47,23 @@ export function handleAreaInput(e) {
   const input = e.target;
   const value = input.value;
 
-  if (isNaN(value) || input.value === '') {
+  if (value === '' || isNaN(+value)) {
     Object.values(conversionMap).forEach(({ target }) => {
       target.value = '';
-      return;
     });
+    return;
   }
 
   Object.keys(conversionMap).forEach(key => {
     if (input.dataset.convertType === key) {
       const { target, type } = conversionMap[key];
 
-      const convertedValue = areaConvert(value, type);
+      const convertedValue = areaConverter(+value, type);
 
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value = convertedValue !== '' ? +convertedValue.toFixed(4) : '';
+        target.value = +convertedValue.toFixed(4);
       }
     }
   });

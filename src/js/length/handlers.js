@@ -32,52 +32,52 @@ const conversionMap = {
     type: 'km-to-m',
   },
 
-  'cm-to-inch': {
-    target: refs.inchToCm,
-    type: 'cm-to-inch',
-  },
+  // 'cm-to-inch': {
+  //   target: refs.inchToCm,
+  //   type: 'cm-to-inch',
+  // },
 
-  'inch-to-cm': {
-    target: refs.cmToInch,
-    type: 'inch-to-cm',
-  },
+  // 'inch-to-cm': {
+  //   target: refs.cmToInch,
+  //   type: 'inch-to-cm',
+  // },
 
-  'm-to-ft': {
-    target: refs.footToMeter,
-    type: 'm-to-ft',
-  },
+  // 'm-to-ft': {
+  //   target: refs.footToMeter,
+  //   type: 'm-to-ft',
+  // },
 
-  'ft-to-m': {
-    target: refs.meterToFoot,
-    type: 'ft-to-m',
-  },
+  // 'ft-to-m': {
+  //   target: refs.meterToFoot,
+  //   type: 'ft-to-m',
+  // },
 
-  'm-to-yd': {
-    target: refs.yardToMeter,
-    type: 'm-to-yd',
-  },
+  // 'm-to-yd': {
+  //   target: refs.yardToMeter,
+  //   type: 'm-to-yd',
+  // },
 
-  'yd-to-m': {
-    target: refs.meterToYard,
-    type: 'yd-to-m',
-  },
+  // 'yd-to-m': {
+  //   target: refs.meterToYard,
+  //   type: 'yd-to-m',
+  // },
 
-  'km-to-mi': {
-    target: refs.mileToKm,
-    type: 'km-to-mi',
-  },
+  // 'km-to-mi': {
+  //   target: refs.mileToKm,
+  //   type: 'km-to-mi',
+  // },
 
-  'mi-to-km': {
-    target: refs.kmToMile,
-    type: 'mi-to-km',
-  },
+  // 'mi-to-km': {
+  //   target: refs.kmToMile,
+  //   type: 'mi-to-km',
+  // },
 };
 
 export function handleLengthInput(e) {
   const input = e.target;
   const value = input.value;
 
-  if (isNaN(value) || input.value === '') {
+  if (isNaN(+value) || input.value === '') {
     Object.values(conversionMap).forEach(({ target }) => (target.value = ''));
     return;
   }
@@ -86,12 +86,12 @@ export function handleLengthInput(e) {
     if (input.dataset.convertType === key) {
       const { target, type } = conversionMap[key];
 
-      const convertedValue = lenConvert(value, type);
+      const convertedValue = lenConvert(+value, type);
 
       if (isNaN(convertedValue)) {
         target.value = '';
       } else {
-        target.value = convertedValue !== '' ? +convertedValue.toFixed(3) : '';
+        target.value = +convertedValue.toFixed(3);
       }
     }
   });

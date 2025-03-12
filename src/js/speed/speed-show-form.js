@@ -1,6 +1,6 @@
 import { refs } from './refs';
 
-const speedTriggerButton = document.querySelector('.js-speed-trigger-button'); //for arrow
+const speedTriggerButton = document.querySelector('.js-speed-trigger-button');
 
 export function showForms() {
   const isOpen = refs.speedForm.classList.contains('active');
